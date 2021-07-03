@@ -1,0 +1,146 @@
+/* RESET =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    text-decoration: none;
+    list-style: none;
+}
+
+/* STYLES ======================================= */
+
+/* HEADER =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+html {
+    background: #FFFAFA;
+}
+
+header {
+    display: flex;
+    height: 4rem;
+
+    align-items: center;
+    padding: 0 2rem;
+
+    color: #630000;
+    justify-content: space-between;
+
+    box-shadow: 0 0 .25rem #630000;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+
+    font-size: 2rem;
+}
+
+header .configs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem .6rem 1.2rem 0;
+    height: 2rem;
+
+    background: none;
+    border: none;
+
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #630000;
+
+    border-radius: .6rem;
+    border: 2px solid #630000;
+
+    transition-duration: .3s;
+}
+
+header .configs:hover {
+    box-shadow: .1rem .1rem .1rem #630000;
+
+    transform: translatex(-.1rem) translateY(-.1rem);
+}
+
+header .configs .configs-img {
+    margin: .4rem .4rem 0;
+
+    height: 2rem;
+    width: 2rem;
+}
+
+/* MAIN =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+main {
+    width: max(60vw, 600px);
+    display: flex;
+
+    margin-left: 50%;
+    transform: translateX(-50%);
+    
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 3.2rem;
+}
+
+main .home-subtitle {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #630000;
+
+    margin-bottom: 1.6rem;
+}
+
+main .tasks-table {
+    width: 100%;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    width: min(60rem, 80vw);
+
+    text-align: center;
+
+    font-family: 'Open sans', sans-serif;
+    font-size: .9rem;
+}
+
+table th {
+    padding: .8rem 1rem;
+}
+
+table td {
+    padding: .8rem 1.2rem;
+}
+
+table td:nth-child(2) {
+    width: 50vw;
+}
+
+table td svg {
+    height: 1.2rem;
+    width: 1.2rem;
+
+    border-radius: .2rem;
+
+    cursor: pointer;
+}
+
+.pendent {
+    padding: .4rem;
+    border: 2px solid #ff1e1e;
+
+    border-radius: .6rem;
+    color: #ff1e1e;
+}
+
+.complete {
+    padding: .4rem;
+    border: 2px solid #73bb00;
+
+    border-radius: .6rem;
+    color: #73bb00;
+}
