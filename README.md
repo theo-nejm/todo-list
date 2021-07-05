@@ -1,6 +1,6 @@
 <center>
 
-# Projeto todo-list | férias [IN PROGRESS]
+# Projeto todo-list | férias [DONE]
 
 <img src="https://i.imgur.com/9TLUkVP.png">
 </center>
