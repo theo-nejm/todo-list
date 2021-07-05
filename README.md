@@ -2,7 +2,7 @@
 
 # Projeto todo-list | férias [IN PROGRESS]
 
-<img src="https://i.imgur.com/rLkbKu4.png">
+<img src="https://i.imgur.com/9TLUkVP.png">
 </center>
 
 + Design e projeto desenvolvidos por mim para auxiliar o pessoal de Ciência da Computação do IFCE a aprender desenvolvimento web de forma prática. 
