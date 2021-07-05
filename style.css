@@ -8,6 +8,12 @@
     list-style: none;
 }
 
+/* GENERALS =========================================== */
+html,
+body {
+    height: 100vh;
+}
+
 /* STYLES ======================================= */
 
 /* HEADER =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
@@ -35,7 +41,12 @@ header h1 {
     font-size: 2rem;
 }
 
-header .configs {
+header .header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+header button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,12 +58,34 @@ header .configs {
 
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
+
+    cursor: pointer;
+
+    transition-duration: .3s;
+}
+
+header button.add-task {
+    color: rgb(71, 71, 252);
+
+    margin-right: .4rem;
+}
+
+header button.add-task:hover {
+    color: rgb(138, 138, 255);
+}
+
+header button.add-task span {
+    font-size: 1.6rem;
+    font-weight: thin;
+
+    margin: 0 .4rem;
+}
+
+header button.configs {
     color: #630000;
 
     border-radius: .6rem;
     border: 2px solid #630000;
-
-    transition-duration: .3s;
 }
 
 header .configs:hover {
@@ -76,7 +109,7 @@ main {
 
     margin-left: 50%;
     transform: translateX(-50%);
-    
+
     align-items: center;
     flex-direction: column;
 
@@ -94,18 +127,56 @@ main .home-subtitle {
 main .tasks-table {
     width: 100%;
     display: flex;
-    
+
     align-items: center;
     justify-content: center;
 }
 
 table {
     width: min(60rem, 80vw);
+    overflow-y: scroll;
 
     text-align: center;
 
     font-family: 'Open sans', sans-serif;
     font-size: .9rem;
+}
+
+tbody {
+    height: 52.5vh;
+    overflow-y: auto;
+    position: absolute;
+}
+
+tbody::-webkit-scrollbar {
+    width: .75rem;
+}
+
+tbody::-webkit-scrollbar-track {
+    background: #e2e2e2;
+}
+
+tbody::-webkit-scrollbar-thumb {
+    background-color: #6a6a6a; 
+    border-radius: .6rem;
+
+    border: .15rem solid #e2e2e2;
+}
+
+tbody td:nth-child(1) {
+    width: 9%;
+}
+
+tbody td:nth-child(3) {
+    width: 17.25%;
+}
+
+tbody td:nth-child(4) {
+    width: 22.75%;
+}
+
+tbody td:nth-child(5) {
+    width: 19.25%;
 }
 
 table th {
@@ -143,4 +214,141 @@ table td svg {
 
     border-radius: .6rem;
     color: #73bb00;
+}
+
+/* FOOTER =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+footer {
+    position: absolute;
+    bottom: .75rem;
+    width: 100%;
+
+    font-size: .8rem;
+    color: rgba(55, 55, 55, .8);
+    text-align: center;
+}
+
+/* MODALS ======================================================== */
+
+.modal-wrapper {
+    z-index: 999;
+    background: rgba(55, 55, 55, .5);
+
+    height: 100vh;
+    width: 100vw;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+}
+
+.modal-wrapper.shown {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    position: relative;
+
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-between;
+
+    height: auto;
+    width: min(30rem, 80vw);
+
+    background: #FFFAFA;
+
+    border-radius: .6rem;
+
+    font-family: 'Open sans', sans-serif;
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.modal .modal-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+
+    color: rgb(99, 0, 0);
+}
+
+.modal .modal-subtitle {
+    width: min(18rem, 48vw);
+    font-size: .9rem;
+    color: rgba(99, 0, 0, .8);
+}
+
+.modal-body {
+    display: flex;
+}
+
+.modal-buttons {
+    width: min(18rem, 48vw);
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 1.2rem;
+}
+
+.modal .button {
+    height: 2.8rem;
+    width: 8rem;
+
+    padding: .6rem 1.2rem;
+    background: none;
+
+    cursor: pointer;
+
+    border-radius: .4rem;
+    border: none;
+
+    transition-duration: .5s;
+}
+
+.button.close-modal {
+    border: 1px solid grey;
+
+    color: grey;
+}
+
+.button.close-modal:hover {
+    border-color: rgb(75, 75, 75);
+    color: rgb(75, 75, 75);
+}
+
+.button.save {
+    background: rgb(71, 71, 252);
+    color: #FFFAFA;
+}
+
+.button.save:hover {
+    background: rgb(138, 138, 255)
+}
+
+/* ADD TASK MODAL ================================================= */
+
+#task-name {
+    background: none;
+    outline: none;
+
+    height: 3.2rem;
+    width: min(18rem, 48vw);
+
+    border-radius: .4rem;
+    border: 2px solid rgb(71, 71, 252);
+
+    padding: .6rem 1.2rem;
 }
